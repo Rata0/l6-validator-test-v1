@@ -1,4 +1,4 @@
-import _ from "lodash";
+import _ from 'lodash';
 
 export default class ObjectSchema {
   constructor(shapes) {
@@ -23,6 +23,7 @@ export default class ObjectSchema {
       const validator = schema[key];
       return keys.map((key) => iter(obj[key], key, validator));
     };
-    return _.flattenDeep(keys.map((key) => iter(value[key], key, this.validators))).every((val) => val);
+    return _.flattenDeep(keys.map((key) => iter(value[key], key, this.validators)))
+      .every((val) => val);
   }
 }
