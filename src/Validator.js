@@ -1,6 +1,6 @@
-import ArraySchema from './ArraySchema.js';
 import NumberSchema from './NumberSchema.js';
 import ObjectSchema from './ObjectSchema.js';
+import ArraySchema from './ArraySchema.js';
 
 export default class Validator {
   number() {
@@ -8,7 +8,7 @@ export default class Validator {
   }
 
   array() {
-    return new ArraySchema([(array) => Array.isArray(array)]);
+    return new ArraySchema();
   }
 
   object() {

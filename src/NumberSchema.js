@@ -1,3 +1,5 @@
 export default class NumberSchema {
-  isValid = (number) => typeof number === 'number';
+  isValid(value) {
+    return typeof value === 'number';
+  }
 }
